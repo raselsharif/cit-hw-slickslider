@@ -1,0 +1,1153 @@
+/* =========== Common CSS =========== */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    line-height: 0.8;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+
+/* ================ Header section Start =============== */
+#header {
+    background: #0f2f44;
+}
+
+.headerFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fefefe;
+}
+
+/* ================ Header section End =============== */
+/* ================ navbar section start =============== */
+#nav {
+    padding: 30px 0;
+}
+
+.navFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {}
+
+.menubar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.crossSearch {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menubar>ul {
+    display: flex;
+    gap: 40px;
+    text-transform: capitalize;
+}
+
+.menubar ul li {
+    position: relative;
+}
+
+.menubar ul li a {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #222222;
+    transition: all linear 0.3s;
+    position: relative;
+}
+
+.menubar ul li a:hover {
+    color: #ffc712;
+}
+
+.menubar>ul>li>a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 0;
+    background: #fff9e6;
+    z-index: -1;
+    transition: all linear 0.3s;
+}
+
+.menubar>ul>li>a:hover::after {
+    width: 130%;
+}
+
+.dropDown {}
+
+.dropDown>ul {
+    border-top: 2px solid #f8db7b;
+    display: flex;
+    background: #fff;
+    flex-direction: column;
+    width: 100px;
+    text-align: center;
+    position: absolute;
+    top: 80px;
+    right: 50%;
+    transform: translateX(50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear 0.5s;
+}
+
+.menubar>ul>li:hover .dropDown>ul {
+    top: 60px;
+    opacity: 1;
+    visibility: visible;
+    width: 150px;
+}
+
+.dropDown ul li {
+    transition: all linear 0.3s;
+    padding: 15px 0;
+}
+
+.dropDown ul li:hover {
+    background: #fff9e6;
+    box-shadow: 0 0 5px rgb(187, 187, 168);
+}
+
+
+
+/* ================ navbar section End =============== */
+
+/* ================ Banner section Start =============== */
+#banner {
+    background: url(..//images/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner_main {
+    display: flex;
+    gap: 30px;
+}
+
+.bannerText {
+    padding: 142px 0;
+    width: 470px;
+}
+
+.bannerText h2:nth-child(1) {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #0f2f44;
+}
+
+.bannerText h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 400;
+    font-size: 80px;
+    color: #0f2f44;
+    padding-top: 12px;
+    padding-bottom: 16px;
+}
+
+.bannerText h2:nth-child(3) {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #8484bf;
+    letter-spacing: 8px;
+}
+
+.bannerText p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #0f2f44;
+    line-height: 24px;
+    padding: 30px 0;
+}
+
+.headerLink {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.headerLink .linkOne a {
+    background: #8484bf;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 8px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    transition: all linear 0.3s;
+}
+
+.headerLink .linkOne a:hover {
+    opacity: 0.7;
+}
+
+.headerLink .linkPlay a i {
+    color: #fff;
+    background: #8484bf;
+    border-radius: 50%;
+    font-size: 48px;
+    transition: all linear 0.3s;
+}
+
+.headerLink .linkPlay a i:hover {
+    opacity: 0.7;
+}
+
+/* ================ Banner section End =============== */
+
+
+/* ================ about section Start =============== */
+#about {
+    background: #fff;
+    padding: 80px 0 100px 0;
+}
+
+.aboutFlex {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.aboutText {
+    width: 570px;
+    padding: 20px 0 60px 0;
+}
+
+.heading {}
+
+.heading p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #0f2f44;
+    padding-bottom: 10px;
+}
+
+.heading h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 400;
+    font-size: 32px;
+    color: #0f2f44;
+}
+
+.aboutText>p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0f2f44;
+    padding: 30px 0;
+    line-height: 24px;
+}
+
+.aboutMiddleText {}
+
+.aboutMiddleText p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0f2f44;
+    padding-bottom: 33px;
+    line-height: 44px;
+    margin-left: 30px;
+}
+
+.aboutLink {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.aboutLink a {
+    padding: 15px 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #474b3f;
+    background: #fff;
+    border-radius: 10px;
+    transition: all linear 0.3s;
+    box-shadow: 0 0 10px #e2e2e2;
+}
+
+.aboutLink a:hover {
+    background: #ffc712;
+}
+
+.aboutImage {
+    width: 570px;
+}
+
+.aboutImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================ about section End =============== */
+/* ================ skill section start =============== */
+#skill {
+    padding-bottom: 100px;
+}
+
+#skill .heading {
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+#skill .heading p {
+    margin-top: 30px;
+    line-height: 24px;
+}
+
+.skill_wrapper {
+    display: flex;
+    align-items: end;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skill_img {
+    width: 570px;
+    position: relative;
+}
+
+.skill_img img {
+    position: absolute;
+    bottom: 0;
+    right: -75px;
+}
+
+.skill_text {
+    width: 570px;
+}
+
+.skill_perce_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill_items {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+    transition: all linear 0.3s;
+}
+
+.skill_items:hover {
+    transform: scale(102%);
+}
+
+.line {
+    height: 10px;
+    width: 410px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: end;
+}
+
+.line_two {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.skill_line_text {
+    margin-top: -22px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0f2f44;
+    text-transform: capitalize;
+}
+
+.photoshop {
+    background: #2a4896;
+    width: 90%;
+}
+
+.illustrator {
+    background: #5d3b15;
+    width: 85%;
+}
+
+.dream {
+    background: #344a1f;
+    width: 75%;
+}
+
+.ae {
+    background: #392960;
+    width: 80%;
+}
+
+.skill_logo {
+    height: 70px;
+    width: 70px;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #e4e4e4;
+}
+
+.skill_logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ================ skill section end =============== */
+
+
+#service {
+    padding: 60px 0 80px 0;
+    background: #f5f5f5;
+}
+
+#service .heading {
+    text-align: center;
+}
+
+.serviceFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 55px;
+}
+
+.serviceCard {
+    width: 370px;
+    height: 190px;
+    position: relative;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.serviceImgArea {
+    width: 100px;
+    height: 190px;
+    background: #e9e9e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.serviceImg {
+    height: 60px;
+    width: 60px;
+}
+
+.serviceImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.serviceText {
+    padding: 30px 20px;
+    width: 270px;
+    background: #eeeeee;
+}
+
+.serviceText h3 {
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #222222;
+}
+
+.serviceText p {
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #444444;
+    /* border:  1px solid blue; */
+}
+
+.serviceOverly {
+    position: absolute;
+    background: #0f2f44;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear 0.3s;
+}
+
+.serviceCard:hover .serviceOverly {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+}
+
+.serviceOverly h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.serviceOvImg {
+    text-align: center;
+}
+
+.serviceLink {
+    position: absolute;
+    bottom: -8%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.serviceOverly img {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.serviceOverly i {
+    background: #ffc712;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================ service section Start =============== */
+
+/* ================ service section End =============== */
+
+/* ================ portfolio section Start =============== */
+#portfolio {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+#portfolio .heading {
+    text-align: center;
+}
+
+.portFlex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 60px;
+    padding: 60px 0;
+}
+.portfFlexMain{
+    position: relative;
+}
+.portfFlexMain .next{
+    position: absolute;
+    right: 35%;
+}
+.portfFlexMain .prev{
+    position: absolute;
+    left: 31%;
+}
+.portImgArea {}
+
+.portImg {
+    height: 420px;
+    width: 350px;
+}
+
+.portImgMid {
+    box-shadow: 0 0 30px #e0e0e0;
+}
+
+.portImgMid h2 {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.portImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portImg:hover {
+    opacity: 0.9;
+}
+
+/* ================ portfolio section End =============== */
+
+/* ================ portfolio section Start =============== */
+#testimonial {
+    background: #f5f5f5;
+    padding: 60px 0;
+}
+
+.testmMain {
+    position: relative;
+}
+
+#testimonial .heading {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.testmFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testmCard {
+    width: 570px;
+    height: 215px;
+    background: #e9e9e9;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.testmImg {
+    overflow: hidden;
+    width: 215px;
+    height: 215px;
+}
+
+.testmImg img {
+    transition: all linear 0.3s;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.testmImg img:hover {
+    opacity: 0.9;
+    transform: scale(110%);
+}
+
+.testmText {
+    width: 355px;
+    margin: 30px 20px;
+}
+
+.testmText p {
+    margin-bottom: 30px;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #0f2f44;
+    text-align: justify;
+}
+
+.testmText h3 {
+    padding-bottom: 13px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #0f2f44;
+    text-transform: capitalize;
+}
+
+.testmText h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #0f2f44;
+}
+
+.next,
+.prev {
+    background: #ffc712;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.next i,
+.prev i {
+    font-size: 15px;
+    color: #2f3e42;
+}
+
+.next {
+    position: absolute;
+    top: 50%;
+    right: -7px;
+    transform: translateY(-50%);
+}
+
+.prev {
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+}
+
+/* ================ portfolio section End =============== */
+#blogs {
+    padding: 100px 0;
+    background: #f9fafb;
+}
+
+#blogs .heading {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.blogFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 58px;
+}
+
+.blogFlexMain {
+    position: relative;
+}
+
+.blogFlexMain .next {
+    position: absolute;
+    right: 36%;
+}
+
+.blogFlexMain .prev {
+    position: absolute;
+    left: 32%;
+}
+
+.blogCard {
+    position: relative;
+    width: 350px;
+    background: #f5f5f5;
+    padding: 20px 20px 30px;
+    border-radius: 10px;
+    transition: all linear 0.3s;
+}
+
+.blogCard:hover {
+    background: #0f2f44;
+}
+
+.blogCard:hover .blogText h3 {
+    color: #fff;
+}
+
+.blogCard:hover .blogText p {
+    color: #fff;
+}
+
+.blogCard:hover .blogLink a {
+    color: #fff;
+}
+
+.blogCard:hover .blogImg img {
+    opacity: 0.8;
+    transform: scale(110%) rotate(2deg);
+
+}
+
+.blogImg {
+    width: 310px;
+    height: 283px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.blogImg img {
+    overflow: hidden;
+    transition: all linear 0.3s;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blogText {}
+
+.blogText p {
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777;
+}
+
+.blogText h3 {
+    padding-bottom: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #222222;
+    line-height: 26px;
+}
+
+.blogLink {}
+
+.blogLink a {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #777777;
+}
+
+.blogLink a:hover {
+    color: #6b541b;
+}
+
+.blogLink a i {
+    padding-left: 20px;
+}
+
+/* ================ blogs section Start =============== */
+#footer {
+    background: #f5f5f5;
+    padding: 60px 0;
+    box-shadow: 0 0 30px #d8d3d3;
+    position: relative;
+}
+
+.goToTop {
+    position: absolute;
+    top: -3%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffc712;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all linear 0.3s;
+}
+
+.goToTop a i {
+    color: #fff;
+}
+
+.goToTop i:hover {
+    color: #ffc712;
+}
+
+.goToTop:hover {
+    opacity: 0.8;
+    border: 1px solid #ffc712;
+    background: #fff;
+}
+
+.footerFlex {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.bizzency {
+    width: 265px;
+    margin-right: 30px;
+}
+
+.bizzency p {
+    padding: 30px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #777;
+    line-height: 24px;
+}
+
+.bizSocLink ul {
+    display: flex;
+    gap: 10px;
+}
+
+.bizSocLink ul li a {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #0f2f44;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear 0.3s;
+    opacity: 0.8;
+}
+
+.bizSocLink ul li a {
+    color: #0f2f44;
+}
+
+.bizSocLink ul li a:hover {
+    background: #0f2f44;
+    color: #fff;
+    opacity: 1;
+    transform: rotate(360deg);
+}
+
+.contact {
+    width: 268px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.footerHead h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #222222;
+    padding-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.footerItem {
+    display: flex;
+    gap: 25px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footerItem:last-child {
+    margin-bottom: 0;
+}
+
+.footerItem p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777;
+    line-height: 24px;
+}
+
+.footerItem a {
+    color: #777;
+}
+
+.footerItem i {
+    color: #777;
+    font-size: 22px;
+}
+
+.impLinks {
+    width: 155px;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.impLinks ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.impLinks ul li a {
+    text-transform: capitalize;
+    color: #777;
+    transition: all linear 0.3s;
+}
+
+.impLinks ul li a:hover {
+    color: #0f2f44;
+    margin-left: 20px;
+}
+
+.flickr {
+    width: 370px;
+}
+
+.flickrFlex {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.flickrImg {
+    height: 80px;
+    width: 80px;
+    overflow: hidden;
+}
+
+.flickrImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.flickrImg img:hover {
+    opacity: 0.9;
+    transform: scale(110%);
+}
+
+.blogLinks {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.blogLinks a {
+    padding: 15px 20px;
+    background: #fcc512;
+    display: inline-block;
+    text-align: center;
+    border-radius: 7px;
+    color: #fff;
+    transition: all linear 0.3s;
+    border: 1px solid #fcc512;
+}
+
+.blogLinks a:hover {
+    color: #fcc512;
+    background: #fff;
+}
+
+/* ================ blogs section End =============== */
+
+/* ================ copyright section Start =============== */
+#copyright {
+    background: #fefefe;
+    padding: 20px 0;
+}
+
+#copyright .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777;
+}
+
+#copyright .container span {
+    text-transform: uppercase;
+    color: #fcc512;
+}
+
+/* ================ copyright section End =============== */
+/* ================ Header section Start =============== */
+/* ================ Header section End =============== */
+/* ================ Header section Start =============== */
+/* ================ Header section End =============== */
+
+/* 
+font-family: 'Abril Fatface', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Ubuntu', sans-serif; 
+
+    font-weight: 400;
+    font-size: 16px;
+    color: #fefefe;
+*/
+
+.strip {
+    width: 410px;
+    height: 10px;
+    background: gray;
+    margin: 50px 0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.strip:after {
+    border-radius: 10px;
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    background: red;
+    top: 0;
+    right: 0;
+}
+
+.strip:before {
+    content: "35%";
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    top: -25px;
+    right: 0;
+}
+
+.strip p {
+    position: absolute;
+    top: -25px;
+    right: 0;
+}
